@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
-
+import { catchError } from 'rxjs/internal/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/internal/operators';
+import { map } from 'rxjs/operators';
 
 
 //Declaring the api url that will provide data for the client app
-const apiUrl = 'https://radiant-depths-97196.herokuapp.com';
+const apiUrl = 'https://marinanadj-53303.herokuapp.com/';
 
 @Injectable({
   providedIn: 'root'
