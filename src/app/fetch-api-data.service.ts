@@ -5,7 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 // Declaring the API URL that provides data for the application
-const apiUrl = 'https://femmovies.herokuapp.com/'
+const apiUrl = 'https://marinanadj-53303.herokuapp.com/'
 
 // Get Authorization token stored in local storage
 const token = localStorage.getItem('token');
