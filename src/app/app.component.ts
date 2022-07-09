@@ -11,17 +11,26 @@ import { MatDialog } from '@angular/material/dialog';
 export class AppComponent {
   title = 'myFlix-Angular-client';
 
-  constructor(public dialog: MatDialog) { }
-// This is the function that will open the dialog when the signup button is clicked  
-openUserRegistrationDialog(): void {
+  constructor(
+    public dialog: MatDialog
+  ) { }
+
+  /**
+   * opens the user registration dialog when signup button is clicked
+   */
+  openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
-// Assigning the dialog a width
-    width: '280px'
+      // Assign dialog width
+      width: '280px'
     });
   }
+
+  /**
+   * opens the user login dialog when login button is clicked
+   */
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
-      // Assigning the dialog a width
+      // Assign dialog width
       width: '280px'
     });
   }
