@@ -30,6 +30,7 @@ export class ProfileComponent implements OnInit {
   /**
    * Gets user data from api call and sets the user variable to returned JSON file
    * @returns object holding user information
+   * @function getUser
    */
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
@@ -50,6 +51,7 @@ export class ProfileComponent implements OnInit {
 
   /**
    * deletes the user profile, redirects to welcome screen
+   * @function deleteUser
    */
   deleteProfile(): void {
     if (confirm('Are you sure you want to delete your account? This cannnot be undone.')) {

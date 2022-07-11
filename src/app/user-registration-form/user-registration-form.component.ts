@@ -1,6 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+
+//closing dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
+//connecting to our API
 import { FetchApiDataService } from '../fetch-api-data.service';
+//display notif.back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -15,8 +19,7 @@ export class UserRegistrationFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserRegistrationFormComponent>,
-    public snackBar: MatSnackBar
-  ) { }
+    public snackBar: MatSnackBar ) { }
 
   ngOnInit(): void {
   }
@@ -26,14 +29,13 @@ export class UserRegistrationFormComponent implements OnInit {
    */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe((result) => {
-      // TBD: Logic for successfull registration!
+      // Logic for successfull registration!
       this.dialogRef.close(); // Close the modal on success
-      console.log(result);
+      console.log(Response);
       this.snackBar.open(result, 'OK', {
         duration: 2000
       });
     }, (result) => {
-      console.log(result);
       this.snackBar.open(result, 'OK', {
         duration: 2000
       });
